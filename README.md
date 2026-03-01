@@ -52,10 +52,11 @@ SELECT
 FROM orderdetails od
 JOIN products p ON od.productid = p.productid
 GROUP BY p.ProductID, p.ProductName
-ORDER BY sales_percentage DESC;```
+ORDER BY sales_percentage DESC;
 
 ---
 
+## 👨‍💻 Connect with Me
 I’m a Data Analyst passionate about turning complex data into visual stories. Feel free to reach out for collaboration or questions:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/samir-hendawy-530124231)
