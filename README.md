@@ -39,29 +39,32 @@ Showcasing professional SQL development skills:
 * `schema_setup.sql`: (Optional) Script to initialize the `ecommercedb` and sample data.
 * `README.md`: Project documentation.
 
+
 ---
 
-## 📊 Key Featured Query
+## 📊 Key Featured Query  
+
 One of the highlights of this project is the **Sales Contribution Analysis**, which uses window functions to calculate exactly what percentage of total company revenue each product generates:
 
+
+<pre>
 ```sql
-SELECT 
+SELECT
     p.productname,
     SUM(od.quantity * od.unitprice) AS productsales,
     ROUND(
-        (SUM(od.quantity * od.unitprice) / 
-        SUM(SUM(od.quantity * od.unitprice)) OVER()) * 100, 
+        (SUM(od.quantity * od.unitprice) /
+        SUM(SUM(od.quantity * od.unitprice)) OVER()) * 100,
     2) AS sales_percentage
 FROM orderdetails od
 JOIN products p ON od.productid = p.productid
 GROUP BY p.ProductID, p.ProductName
 ORDER BY sales_percentage DESC;
-
-**```**
+<pre>
 
 ---
 
-## 👨‍💻 **Connect with Me**
+## 👨‍💻 Connect with Me
 
 I’m a Data Analyst passionate about turning complex data into visual stories. Feel free to reach out for collaboration or questions:
 
