@@ -47,7 +47,6 @@ Showcasing professional SQL development skills:
 One of the highlights of this project is the **Sales Contribution Analysis**, which uses window functions to calculate exactly what percentage of total company revenue each product generates:
 
 
-<pre>
 ```sql
 SELECT
     p.productname,
@@ -60,7 +59,7 @@ FROM orderdetails od
 JOIN products p ON od.productid = p.productid
 GROUP BY p.ProductID, p.ProductName
 ORDER BY sales_percentage DESC;
-<pre>
+```
 
 ---
 
