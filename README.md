@@ -56,7 +56,7 @@ FROM orderdetails od
 JOIN products p ON od.productid = p.productid
 GROUP BY p.ProductID, p.ProductName
 ORDER BY sales_percentage DESC;
-
+**```**
 
 ---
 
